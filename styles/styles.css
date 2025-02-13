@@ -85,7 +85,7 @@ body.appear {
 }
 
 header {
-  height: var(--nav-height);
+  /* height: var(--nav-height); */
 }
 
 header .header,
@@ -166,7 +166,7 @@ a:hover {
 }
 
 /* buttons */
-a.button:any-link,
+/* a.button:any-link,
 button {
   box-sizing: border-box;
   display: inline-block;
@@ -208,7 +208,40 @@ button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
   color: var(--text-color);
+} */
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
 }
+
+.button {
+    display: inline-block;
+    background-color: transparent;
+    color: #8B0D17;
+    border: 2px solid #8B0D17;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+    transform: skew(-10deg);
+}
+a.button {
+    color: #8B0D17;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.button:hover {
+    background-color: #8B0D17;
+    color: white;
+}
+
 
 main img {
   max-width: 100%;
@@ -240,6 +273,11 @@ main > .section > div {
 
 main > .section:first-of-type {
   margin-top: 0;
+}
+
+main > .section:nth-of-type(2)  .button-container {
+    display: flex;
+    justify-content: center;
 }
 
 @media (width >= 900px) {
